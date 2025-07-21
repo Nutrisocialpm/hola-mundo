@@ -1,0 +1,7 @@
+- name: Ejecutar hola.ps1 en Windows
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Ejecutar PowerShell desde archivo
+      win_shell: |
+        powershell.exe -ExecutionPolicy Bypass -File hola.ps1
